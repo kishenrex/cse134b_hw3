@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiments</title>
+    <style>
+      * {
+        border: 1px solid black;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Homepage</a></li>
+                <li><a href="./about.html">About Me</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./experience.html">Experience</a></li>
+                <li><a href="./resume.html">Resume</a></li>
+                <li><a href="./contact.html">Contact Me</a></li>
+                <li><a href="./experiments.html"><i>Experiments</i></a></li>
+            </ul>
+        </nav>
+        <h1>Experiments</h1>
+        <p>This page demonstrates the proper use of <code>template</code>, <code>picture</code>, <code>audio</code>, <code>video</code>, <code>canvas</code>, <code>source</code>, and <code>script</code> tags.</p>
+    </header>
+    <main>
+        <section>
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" fill="blue" stroke="black" stroke-width="2" />
+            </svg>
+        </section>
+        <section>
+            <h2>1. <code>&lt;template&gt;</code> Element</h2>
+            <p>
+                The <code>&lt;template&gt;</code> tag holds HTML content that is not rendered by the browser by default.
+            </p>
+            
+            <template>
+                <article class="project-card">
+                    <h3>A Project Title</h3>
+                    <p>This content would be cloned by JavaScript to create new project cards.</p>
+                    <a href="#">Learn More</a>
+                </article>
+            </template>
+        </section>
+        <section>
+            <h2>2. <code>&lt;picture&gt;</code> & <code>&lt;source&gt;</code> Elements</h2>
+            <p>
+                The <code>&lt;picture&gt;</code> tag provides multiple <code>&lt;source&gt;</code> tags for "art direction."
+                The browser will choose the best image.
+            </p>
+            
+            <picture>
+                <source srcset="/assets/images/prof_pic_webp.webp" type="image/webp">
+                <img src="assets/images/profile_pic.jpg" alt="Kishen's profile picture" width="250" height="300">
+            </picture>
+        </section>
+        <section>
+            <h2>3. <code>&lt;audio&gt;</code> & <code>&lt;source&gt;</code> Elements</h2>
+            <p>
+                The <code>&lt;audio&gt;</code> tag embeds a sound player. The <code>controls</code> attribute makes it visible.
+            </p>
+            
+            <audio controls>
+                <source src="assets/media/specialist.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+        <section>
+            <h2>4. <code>&lt;video&gt;</code> & <code>&lt;source&gt;</code> Elements</h2>
+            <p>
+                The <code>&lt;video&gt;</code> tag embeds a video player. 
+            </p>
+            
+            <video width="400" controls>
+                <source src="/assets/media/clap.mp4" type="video/mp4">
+            </video>
+        </section>
+        <section>
+            <h2>5. <code>&lt;canvas&gt;</code> Element</h2>
+            <p>
+                The <code>&lt;canvas&gt;</code> tag is a "drawing board". 
+            </p>
+            
+            <canvas id="myCanvas" width="300" height="150">
+                Fallback text for browsers that do not support the canvas element.
+            </canvas>
+        </section>
+        <section>
+            <h2>6. <code>&lt;script&gt;</code> Element</h2>
+            <p>
+                The <code>&lt;script&gt;</code> tags are placed at the end of the <code>&lt;body&gt;</code>.
+                One script performs the drawing on the canvas, and the other
+                is a placeholder demonstrating how a third-party analytics script would be included.
+            </p>
+        </section>
+    </main>
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        
+        const ctx = canvas.getContext('2d');
+        
+        // Draw a simple blue rectangle
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(10, 10, 120, 80);
+    </script>
+
+    <script src="https://example.com/analytics.js" async defer></script>
+    
+</body>
+</html>
+
