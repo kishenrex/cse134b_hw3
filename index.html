@@ -58,10 +58,12 @@
       class HelloWorld extends HTMLElement {
         constructor() {
           super();
-          console.log("Hello world! (from the hello-world custom element)");
+          console.log("Hello world!");
         }
       }
       customElements.define('hello-world', HelloWorld);
     </script>
+
+    <hello-world></hello-world>
 </body>
 </html>
