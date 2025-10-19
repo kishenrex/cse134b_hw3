@@ -9,6 +9,10 @@
       * {
         border: 1px solid black;
       }
+      project-card {
+        display: block;
+        border: 3px solid red;
+      }
     </style>
 </head>
 <body>
@@ -38,14 +42,26 @@
             <h2>Brief Summary:</h2>
             <p>I am a 4th year Computer Science major at UC San Diego. My interests are in web technologies</p>
         </section>
-        <div>
+        <project-card>
             <h3>Featured Projects:</h3>
-        </div>
+            <p>Nightly - Sleep Tracking Web App</p>
+        </project-card>
     </main>
     <footer>
         <p>&copy; 2025 Kishen Thevandran</p>
-        <a href="https://github.com/kishenrex">Github</a>
-        <a href="https://www.linkedin.com/in/kishen-thevandran-441424251">LinkedIn</a>
+        <div>
+            <a href="https://github.com/kishenrex">Github</a>
+            <a href="https://www.linkedin.com/in/kishen-thevandran-441424251">LinkedIn</a>
+        </div>
     </footer>
+    <script>
+      class HelloWorld extends HTMLElement {
+        constructor() {
+          super();
+          console.log("Hello world! (from the hello-world custom element)");
+        }
+      }
+      customElements.define('hello-world', HelloWorld);
+    </script>
 </body>
 </html>
