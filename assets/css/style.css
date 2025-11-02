@@ -134,9 +134,11 @@ footer {
     color: var(--footer-text, #f8f9fa);
     margin-left: 1.5em;
     font-weight: 700;
+    transition: color 0.2s ease-in-out;
     
     &:hover {
-      color: #f8f9fa; /* Keep white on hover */
+      color: var(--primary-color, #0d6efd);
+
       text-decoration: underline;
     }
   }
