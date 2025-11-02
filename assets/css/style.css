@@ -2,7 +2,8 @@
 
 
 :root {
-  --primary-color: #0d6efd; 
+  --primary-color-p3: color(display-p3 0.051 0.435 0.992);
+  --primary-color: var(--primary-color-p3, #0d6efd); /* Uses P3, falls back to sRGB */
   --secondary-color: #6c757d;
   --bg-color: #ffffff;
   --text-color: #212529;
@@ -12,8 +13,8 @@
   --font-primary: 'Roboto', sans-serif;
   --font-secondary: 'Merriweather', serif;
   
-  /* Extra Credit: color-mix() */
-  --primary-hover: color-mix(in srgb, var(--primary-color, #0d6efd) 85%, #000 15%);
+  /* Baseline feature (relative color syntax) */
+  --primary-hover: oklch(from var(--primary-color) calc(l * 0.9) c h);
 }
 
 html {
@@ -321,7 +322,7 @@ dialog::backdrop {
   }
   h3 {
     margin-top: 0;
-    color: var(--primary-color, #0d6efd);
+    color: color-mix(in srgb, var(--primary-color, #0d6efd) 75%, var(--text-color, #212529));
   }
 }
         
@@ -357,7 +358,7 @@ dialog::backdrop {
   main:has(> project-card) {
     display: block; /* Reverts the 2-column grid to a single column for small screens*/
   }
-  
+
   /* Stack footer on mobile */
   footer {
     flex-direction: column;
