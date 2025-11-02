@@ -25,8 +25,21 @@
             <h1>Kishen Thevandran</h1>
             <h2>Software Engineer</h2>
             <picture>
-                <source srcset="/assets/images/prof_pic_webp.webp" type="image/webp">
-                <img src="assets/images/profile_pic.jpg" alt="Kishen's profile picture" width="250" height="300">
+                <source 
+                  srcset="/assets/images/prof_pic_webp_50.webp 1368w, /assets/images/prof_pic_webp.webp 2736w"
+                  sizes="(max-width: 600px) 150px, 250px"
+                  type="image/webp">
+                
+                <source
+                  srcset="/assets/images/profile_pic_50.jpg 1368w, /assets/images/profile_pic.jpg 2736w"
+                  sizes="(max-width: 600px) 150px, 250px"
+                  type="image/jpeg">
+                  
+                <img 
+                  src="assets/images/profile_pic.jpg" 
+                  alt="Kishen's profile picture"
+                  width="250"
+                  height="300">
             </picture>
             
         </section>
