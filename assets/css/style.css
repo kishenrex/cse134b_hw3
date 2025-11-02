@@ -354,6 +354,10 @@ dialog::backdrop {
     gap: 0.5em;
   }
   
+  main:has(> project-card) {
+    display: block; /* Reverts the 2-column grid to a single column for small screens*/
+  }
+  
   /* Stack footer on mobile */
   footer {
     flex-direction: column;
